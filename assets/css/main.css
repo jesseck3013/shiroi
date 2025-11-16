@@ -9,6 +9,18 @@ body {
 header {
   border-bottom: 1px solid #222;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;  
+}
+
+nav {
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
 }
 
 footer {
