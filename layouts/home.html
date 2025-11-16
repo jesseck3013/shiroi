@@ -1,9 +1,8 @@
 {{ define "main" }}
   {{ .Content }}
-  {{ range site.RegularPages }}
-    <section>
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      {{ .Summary }}
-    </section>
+  {{ range first 5 site.RegularPages }}
+      <div class="post-list">        
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>        
+      </div>
   {{ end }}
 {{ end }}

@@ -1,0 +1,14 @@
+{{ $fileName := .fileName }}
+{{ $cssPath := printf "css/%s" $fileName }}
+
+<meta test={{$cssPath}} />
+
+{{- with resources.Get $cssPath }}
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}

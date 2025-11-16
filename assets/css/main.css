@@ -1,22 +1,123 @@
+:root {
+    --bg-main: #F5F5F5;
+    --bg-active: #f2f3f5;
+
+    --link-color: #2a603b;
+    --meta-info-color: gray;
+
+    --font-large: 2.0rem;
+    --font-medium: 1.75rem;
+    --font-base: 1.25rem;
+
+    --font-color: #000000;
+
+    --margin-base: 1.2rem;
+
+    --page-width: 768px;
+}
+
 body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+    background-color: var(--bg-main);
+    font-size: var(--font-base);
+    font-family: sans-serif;     
+    line-height: 1.5;
+    margin: 1rem;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    text-align: justify;
+    padding: 1rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: var(--font-medium);
+    margin-top: var(--margin-base);
+    margin-bottom: var(--margin-base);
+    font-weight: bold;
+    text-align: left;
+}
+
+h2  {
+    font-size: calc(var(--font-medium) * 0.95);
+}
+
+h3  {
+    font-size: calc(var(--font-medium) * 0.90);
+}
+
+h4  {
+    font-size: calc(var(--font-medium) * 0.85);
+}
+
+h5  {
+    font-size: calc(var(--font-medium) * 0.80);
+}
+
+h6  {
+    font-size: calc(var(--font-medium) * 0.75);
 }
 
 header {
   border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;   
+}
+
+nav {
+  width: 50%;
+  font-size: var(--font-base);  
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  height: 100%;  
+  align-items: center;
 }
 
 footer {
   border-top: 1px solid #222;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 a {
-  color: #00e;
+  color: var(--link-color);
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+time {
+  color: var(--meta-info-color);
+}
+
+article {
+  margin: var(--margin-base) 0;  
+}
+
+p {
+  margin: var(--margin-base) 0;
+}
+
+.post-list {
+  margin: var(--margin-base) 0;
+}
+
+.post-list-date {
+  font-size: var(--font-base);
+  font-weight: normal;
+  margin-right: var(--margin-base);
+}
+
+@media (min-width: 1000px) {
+  header {
+    display: flex;
+    justify-content: space-between;      
+  }
+
+  nav {
+    width: 30%;
+  }
 }
