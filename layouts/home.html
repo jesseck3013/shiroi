@@ -1,8 +1,7 @@
 {{ define "main" }}
   {{ .Content }}
   {{ range first 5 site.RegularPages }}
-      <div class="post-list">
-        <time class="post-list-date">{{ dateFormat "2006-01-02" .Params.Date }}</time>            
+      <div class="post-list">        
         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>        
       </div>
   {{ end }}
