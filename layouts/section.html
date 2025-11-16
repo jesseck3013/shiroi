@@ -1,10 +1,12 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
   {{ .Content }}
-  {{ range .Pages }}
-    <section>
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      {{ .Summary }}
-    </section>
+  {{ range .Pages.GroupByDate "2006" }}
+    <h1>{{ .Key }}</h1>
+    {{ range .Pages.ByExpiryDate }}
+        <div class="post-list">
+          <time class="post-list-date">{{ dateFormat "2006-01-02" .Params.Date }}</time>            
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>        
+        </div>
+    {{ end }}
   {{ end }}
 {{ end }}
