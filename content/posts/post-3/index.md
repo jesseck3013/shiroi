@@ -1,5 +1,5 @@
 +++
-title = 'Dealing with indecision with a sense of maintenance and adventure'
+title = 'Post3'
 date = 2023-03-15T11:00:00-07:00
 draft = false
 tags = ['red','green','blue']
