@@ -1,6 +1,6 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range first 5 site.RegularPages }}
+  {{ .Content }}  
+  {{ range first 5 .Site.RegularPages }}
       <div class="post-list">        
         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>        
       </div>
