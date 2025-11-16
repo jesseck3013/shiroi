@@ -2,12 +2,11 @@
     --bg-main: #F5F5F5;
     --bg-active: #f2f3f5;
 
-    --blue: #23457f;
-    --blue-alt: #0071bc;
-    --blue-light: "#d9edf7";
+    --link-color: #2a603b;
+    --meta-info-color: gray;
 
     --font-large: 2.0rem;
-    --font-medium: 1.5rem;
+    --font-medium: 1.75rem;
     --font-base: 1.25rem;
 
     --font-color: #000000;
@@ -25,13 +24,14 @@ body {
     margin: 1rem;
     max-width: var(--page-width);
     margin: 0 auto;
+    text-align: justify;
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-size: var(--font-medium);
     margin-top: var(--margin-base);
     margin-bottom: var(--margin-base);
-    font-weight: bold;    
+    font-weight: bold;
     text-align: left;
 }
 
@@ -65,7 +65,7 @@ header {
 nav {
   width: 30%;
   font-size: var(--font-base);  
-  
+  font-weight: bold;
 }
 
 ul {
@@ -82,6 +82,32 @@ footer {
 }
 
 a {
-  color: #00e;
+  color: var(--link-color);
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+time {
+  color: var(--meta-info-color);
+}
+
+article {
+  margin: var(--margin-base) 0;  
+}
+
+p {
+  margin: var(--margin-base) 0;
+}
+
+.post-list {
+  margin: var(--margin-base) 0;
+}
+
+.post-list-date {
+  font-size: var(--font-base);
+  font-weight: normal;
+  margin-right: var(--margin-base);
 }
